@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>StudyBuddy - Temukan Magang</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        .search-form {
+            margin-top: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .search-input {
+            padding: 14px;
+            width: 300px;
+        }
+
+        .search-button {
+            padding: 14px 22px;
+            background-color: rgb(121, 181, 218);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .job-cards-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .job-card {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 16px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .job-card img {
+            height: 200px;
+            margin-bottom: 16px;
+            object-fit: contain;
+        }
+
+        .job-card h2 {
+            margin-top: 0;
+        }
+
+        .job-card p {
+            margin-bottom: 8px;
+            line-height: 25px;
+        }
+
+        .apply-button {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: rgb(44, 43, 43);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 16px;
+        }
+
+        .apply-button:hover {
+            background-color: rgb(121, 181, 218);
+        }
+
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .pagination a {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 19px;
+            background-color: rgb(121, 181, 218);
+            color: white;
+            text-decoration: none;
+        }
+
+        .pagination a:hover {
+            background-color: rgba(42, 30, 31, 0.85);
+        }
+
+        .job-card p {
+            list-style: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>👩‍🎓👨‍🎓 StudyBuddy 👩‍🎓👨‍🎓</h1>
+        <nav id="navbar-primary" class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbar-primary-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">👩‍💻StudyBuddy</a></li>
+                        <li><a href="profil.html">👨‍🏫Profil</a></li>
+                        <li><a href="magang.html">🔍Pencarian Magang</a></li>
+                        <li><a href="gallery.html">📑Graduates Gallery</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="search-form">
+        <form action="search.php" method="GET">
+            <input type="text" name="keyword" placeholder="Cari lowongan magang..." class="search-input" required>
+            <button type="submit" class="search-button">Cari</button>
+        </form>
+    </div>
+
+    <div class="job-cards-container">
+        <div class="job-card">
+            <img src="https://i.pinimg.com/564x/14/45/2d/14452d62175ef12cf428cd6020ff24da.jpg" alt="Lowongan 1">
+            <h2>Data Analyst</h2>
+            <p>Data analyst adalah profesi pekerjaan yang tugasnya untuk membaca serta menganalisis data yang ada dari
+                perusahaan dalam rangka keberlangsungan perusahaan tersebut.Selain harus mampu menganalisis dan
+                menerjemahkan data berupa informasi. Data analyst juga memiliki peran dalam perancangan dan
+                pemeliharaan sistem data dan database.</p>
+            <a href="apply.html" class="apply-button">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <img src="https://i.pinimg.com/564x/a4/9f/1d/a49f1dff9758893198dc214de1b07dba.jpg" alt="Lowongan 2">
+            <h2>Software Engineer</h2>
+            <p>Tugas dari Software Engineer adalah mempelajari seluruh rangkaian sistem. program, dan perangkat lunak
+                dalam perusahaan. Program-program yang dapat dikembangkan oleh software engineer meliputi aplikasi,
+                sistem operasi, permainan, dan lain sebagainya.</p>
+            <a href="apply.html" class="apply-button">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <img src="https://i.pinimg.com/564x/1c/f0/5e/1cf05ebdf578887ad99c7fcba731c351.jpg" alt="Lowongan 3">
+            <h2>Store Manager</h2>
+            <p>Jobdesk dari store manager antara lain Membuat dan mengembangkan strategi toko yang bertujuan untuk
+                meningkatkan jumlah pelanggan yang datang, meningkatkan penjualan dan mengoptimalkan keuntungan dan juga
+                Memimpin, melatih, memotivasi, membimbing dan memberi feedback kepada staff toko.</p>
+            <a href="apply.html" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="job-card">
+            <img src="https://i.pinimg.com/564x/ac/f0/da/acf0da576f5d4650a02b693c270620b0.jpg" alt="Lowongan 4">
+            <h2>E-Commerce Specialist</h2>
+            <p>Melakukan perancangan konten promosi untuk produk yang hendak dipublikasikan secara online juga
+                Menerapkan sistem, standar dan cara penerapan pemasaran terbaik untuk semua produk baru dirilis oleh
+                perusahaan dan melakukan maintenance dari setiap ide yang sudah dirilis ke publik</p>
+            <a href="apply.html" class="apply-button">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <img src="https://i.pinimg.com/564x/2f/1c/73/2f1c73c5c455e46dc0196ce30db4ab42.jpg" alt="Lowongan 5">
+            <h2>Internal Communications</h2>
+            <p>Secara keseluruhan pekerjaan ini bertanggung jawab untuk membuat dan menyiarkan konten komunikasi
+                internal melalui saluran yang paling efektif dan memastikan semua pesan konsisten dan mencerminkan
+                branding dan nilai-nilai perusahaan</p>
+            <a href="apply.html" class="apply-button">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <img src="https://i.pinimg.com/564x/c3/6d/e3/c36de3e04223a60f5429dd7e56d0d88f.jpg" alt="Lowongan 6">
+            <h2>Finance Staff</h2>
+            <p style="text-align: justify;">
+                Profesi finance diberikan tanggung jawab untuk pencarian, pengalokasian, pengelolaan, melakukan
+                pembayaran untuk perusahaan. Finance harus bertanggung jawab juga dalam mengatur
+                kebutuhan uang kas di perusahaan serta memastikan sesuai pencatatan yang telah dilaksanakan oleh bagian
+                accounting. </p>
+            <a href="apply.html" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="job-card">
+            <img src="https://i.pinimg.com/736x/ee/12/f1/ee12f1e049f3e5e965230daadcc5d243.jpg" alt="Lowongan 7">
+            <h2>Back end Developer</h2>
+            <p> Back end Developer, yang bertugas untuk membuat basis data serta menyiapkan server agar diberikan kepada
+                tim front end sehingga dapat diakses oleh user / klien. Tim backend sendiri haruslah memiliki pemahaman
+                yang mumpuni mengenai algoritma dan struktur data bahasa pemrograman. </p>
+            <a href="apply.html" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="job-card">
+            <img src="https://i.pinimg.com/564x/c9/37/fc/c937fc6135d64822ca50cec5fe356efe.jpg" alt="Lowongan 8">
+            <h2>Administrasi</h2>
+            <p>Staff Adminstrasi memiliki tugas seperti mengumpulkan dan menyusun dokumen,
+                Menyiapkan tiket dan akomodasi untuk kegiatan kerja atau kunjungan luar kantor,
+                Memastikan persediaan alat tulis kantor, dan
+                Memanipulasi data statistik</p>
+            <a href="apply.html" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="job-card">
+            <img src="https://i.pinimg.com/564x/e4/73/6a/e4736a57257745df1ced9153b6d6d6b1.jpg" alt="Lowongan 9">
+            <h2>Creative Design</h2>
+            <p>Creative design memiliki tugas pada proses menciptakan solusi visual yang unik, inovatif, dan estetis
+                dalam
+                berbagai bidang. Beberapa di antaranya adalah bidang grafis, desain produk, interior, desain web, dan
+                lain sebagainya. Proses ini melibatkan pemikiran kreatif, penelitian, analisis, serta penggunaan teknik
+                dan alat desain yang tepat.</p>
+            <a href="apply.html" class="apply-button">Apply Now</a>
+        </div>
+    </div>
+
+    <div class="pagination">
+        <a href="#" class="previous">&laquo; Previous</a>
+        <a href="#" class="next">Next &raquo;</a>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+<footer>
+    <p style="text-align: center;">Hak Cipta © 2023 StudyBuddy_Devina_Adinda_RizqiIndah. Semua hak dilindungi.</p>
+</footer>
+
+</html>
